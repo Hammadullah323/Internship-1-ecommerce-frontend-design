@@ -34,6 +34,7 @@ body {
     gap: 15px; /* Gaps as per Figma */
 }
 
+
 /* --- 3. MAIN HEADER SECTION --- */
 .main-banner {
     flex: none; /* Auto stretch band karne ke liye */
