@@ -1,0 +1,1111 @@
+/* --- 2. Breadcrumb Section --- */
+.breadcrumb-section {
+    width: 100%;
+    height: 64px;
+    background-color: #F8F9FA;
+    display: flex;
+    align-items: center;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+.breadcrumb-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.breadcrumb-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #8B96A5;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-list li img {
+    width: 12px;
+    margin: 0 12px;
+    opacity: 0.5;
+    /* Figma vertical arrow fix */
+    transform: rotate(270deg); 
+}
+
+.breadcrumb-list li.active {
+    color: #505050;
+    font-weight: 400;
+}
+
+
+
+
+
+/*this is my own gemini code*/
+
+
+/* --- Main Container & Reset --- */
+.product-detail-container {
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+.product-main-card {
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 20px; /* Base padding */
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+/* --- Gallery Styling --- */
+.gallery-column { width: 380px; flex-shrink: 0; }
+.main-image-box {
+    width: 380px;
+    height: 380px;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+.main-image-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.thumbnails-row { display: flex; gap: 9px; }
+.thumb {
+    width: 56px;
+    height: 56px;
+    border: 1px solid #DEE2E7;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 2px;
+}
+.thumb.active { border-color: #0D6EFD; }
+
+/* --- Info Column Typography --- */
+.info-column { flex: 1; }
+
+.stock-status { 
+    color: #00B517; 
+    font-size: 16px; 
+    display: flex; 
+    align-items: center; 
+    gap: 6px;
+    margin-bottom: 8px;
+}
+.stock-status img { width: 24px; height: 24px; } /* */
+
+.product-title { 
+    font-size: 20px; 
+    font-weight: 600; 
+    color: #1C1C1C; 
+    line-height: 28px; 
+    margin-bottom: 10px;
+    width: 384px; /* Exact Width */
+}
+
+/* Ratings & Reviews */
+.rating-row-detail { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 15px;
+}
+.stars-group { color: #FF9017; font-size: 18px; }
+.rating-val { color: #FF9017; font-weight: 500; }
+.reviews-count, .sold-count { color: #8B96A5; font-size: 16px; }
+.dot-separator { color: #8B96A5; font-weight: bold; }
+
+/* --- Price Table --- */
+.price-table {
+    background: #FFF0DF; /* Light orange as per Figma */
+    padding: 16px; /* */
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.price-item { display: flex; flex-direction: column; gap: 4px; }
+.price-val { font-size: 18px; font-weight: 600; color: #FA3434; } /* Red for Highlighted Price */
+.qty-range { font-size: 13px; color: #505050; }
+
+/* --- Table & Custom Specs --- */
+/* --- Short-info Section --- */
+.specs-table {
+    width: 430px; /* Exact Width from Figma */
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Har row ki styling */
+.specs-table tr {
+    height: 40px; /* Standard row height */
+}
+
+/* Left Column (Labels like Price, Type) */
+.specs-table td:first-child {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #8B96A5; /* Gray shade for labels */
+    width: 140px; /* Spacing context */
+    vertical-align: middle;
+}
+
+/* Right Column (Values like Negotiable, Classic) */
+.specs-table td:last-child {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #505050; /* Darker shade for values */
+    vertical-align: middle;
+}
+
+/* Horizontal Divider Lines */
+/* Figma mein rows ke darmiyan kafi bariki se lines hain */
+.specs-table td {
+    padding: 8px 0;
+}
+
+/* Customization, Protection & Warranty */
+.custom-specs {
+    width: 430px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.custom-specs p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #8B96A5;
+}
+
+.custom-specs strong {
+    color: #8B96A5; /* Labels are gray as per design */
+    font-weight: 500;
+}
+
+/* --- Seller Card --- */
+.seller-card {
+    width: 280px;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 16px;
+    box-shadow: 0px 1px 2px rgba(56, 56, 56, 0.08);
+}
+.seller-header { display: flex; gap: 12px; align-items: center; margin-bottom: 15px; }
+.seller-logo {
+    width: 48px;
+    height: 48px;
+    background: #C6F3F1;
+    color: #4CA7A7;
+    font-size: 28px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.seller-info p { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    color: #8B96A5; 
+    font-size: 15px;
+    margin-bottom: 12px; 
+}
+.seller-info img { width: 20px; opacity: 0.7; }
+
+.seller-actions { display: flex; flex-direction: column; gap: 8px; margin-bottom: 15px; }
+.send-inquiry-btn { 
+    background: #0D6EFD; 
+    color: #FFF; 
+    border: none; 
+    height: 40px; 
+    border-radius: 6px; 
+    font-weight: 500;
+    cursor: pointer; 
+}
+.seller-profile-btn { 
+    background: #FFF; 
+    color: #0D6EFD; 
+    border: 1px solid #DEE2E7; 
+    height: 40px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+}
+
+/* --- Favorite Button --- */
+.save-later-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #0D6EFD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 0;
+}
+/* --- 2. Tabs Header Row --- */
+.detail-tabs { 
+    display: flex; 
+    border-bottom: 1px solid #DEE2E7; 
+    background: #FFF;
+    padding: 0; /* Padding hata kar individual tab width use karenge */
+    height: 48px; /* Exact Height */
+    align-items: center;
+}
+
+/* --- 3. Individual Tab Styling --- */
+.tab {
+    height: 48px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #8B96A5; /* Inactive text color */
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px; /* Default padding */
+}
+
+/* Figma Specific Widths */
+.tab:nth-child(1) { width: 120px; } /* Description */
+.tab:nth-child(2) { width: 100px; } /* Reviews */
+.tab:nth-child(3) { width: 103px; } /* Shipping */
+.tab:nth-child(4) { width: 152px; } /* About seller */
+
+/* --- 4. Active Tab State --- */
+.tab.active { 
+    color: #0D6EFD; 
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Align perfectly with the bottom border */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Border thickness */
+    background: #0D6EFD;
+}
+
+/* --- 1. Main Layout & Container --- */
+.product-detail-container {
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+.product-main-card {
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+/* --- 2. Gallery Column --- */
+.gallery-column { width: 380px; flex-shrink: 0; }
+.main-image-box {
+    width: 380px;
+    height: 380px;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.main-image-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.thumbnails-row { display: flex; gap: 9px; }
+.thumb {
+    width: 56px;
+    height: 56px;
+    border: 1px solid #DEE2E7;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.thumb.active { border-color: #0D6EFD; }
+
+/* --- 3. Info Column (Middle) --- */
+.info-column { flex: 1; padding: 0 10px; }
+
+.stock-status { 
+    color: #00B517; 
+    font-size: 16px; 
+    display: flex; 
+    align-items: center; 
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.product-title { 
+    font-size: 20px; 
+    font-weight: 600; 
+    color: #1C1C1C; 
+    line-height: 28px; 
+    margin-bottom: 10px;
+    max-width: 384px; /* */
+}
+
+/* Ratings */
+.rating-row-detail { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+.stars-group { color: #FF9017; font-size: 18px; }
+.rating-val { color: #FF9017; font-weight: 500; }
+.reviews-count, .sold-count { color: #8B96A5; font-size: 16px; }
+
+/* Price Area */
+.price-table {
+    background: #FFF0DF; 
+    padding: 16px;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    width: 430px; /* Exact Width */
+}
+.price-item { display: flex; flex-direction: column; gap: 4px; }
+.price-val { font-size: 18px; font-weight: 600; color: #FA3434; }
+.qty-range { font-size: 13px; color: #505050; }
+
+/* Short-info Table */
+.specs-table { width: 430px; border-collapse: collapse; margin: 20px 0; }
+.specs-table td { padding: 10px 0; font-size: 16px; vertical-align: middle; }
+.specs-table td:first-child { color: #8B96A5; width: 140px; }
+.specs-table td:last-child { color: #505050; }
+
+/* --- 4. Supplier Card (Right Side) --- */
+.seller-card {
+    width: 280px; /* Exact Width */
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 16px;
+    background: #FFFFFF;
+    align-self: flex-start;
+}
+
+/* Supplier Header */
+.seller-header { 
+    display: flex; 
+    gap: 12px; 
+    align-items: center; 
+    margin-bottom: 20px;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 15px;
+}
+.seller-logo {
+    width: 48px; /* */
+    height: 48px;
+    background: #C6F3F1;
+    color: #4CA7A7;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.seller-name p { font-size: 16px; color: #1C1C1C; margin: 0; }
+.seller-name strong { font-size: 16px; color: #1C1C1C; font-weight: 400; } /* */
+
+/* Supplier Info Icons */
+.seller-info { margin-bottom: 20px; }
+.seller-info p { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    color: #8B96A5; 
+    font-size: 16px;
+    margin-bottom: 12px; 
+}
+.seller-info img { width: 20px; opacity: 0.6; }
+
+/* Supplier Buttons */
+.seller-actions { display: flex; flex-direction: column; gap: 8px; margin-bottom: 15px; }
+.send-inquiry-btn { 
+    background: linear-gradient(180deg, #127FFF 0%, #0067FF 100%); /* Blue gradient */
+    color: #FFFFFF; 
+    border: none; 
+    height: 40px; 
+    border-radius: 6px; 
+    font-weight: 500;
+    cursor: pointer; 
+}
+.seller-profile-btn { 
+    background: #FFFFFF; 
+    color: #0D6EFD; 
+    border: 1px solid #DEE2E7; 
+    height: 40px; 
+    border-radius: 6px; 
+    font-weight: 500;
+    cursor: pointer; 
+}
+
+/* Save for Later */
+.save-later-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #0D6EFD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+.save-later-btn img{
+    width: 24px;
+
+}
+
+
+.product-tabs-wrapper {
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    margin-top: 20px;
+    width: 880px; /* Exact Width from Figma */
+}
+
+
+/* --- 2. Description Content --- */
+.tab-content {
+    padding: 20px;
+    color: #505050;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.description-text {
+    width: 798px; /* Exact Figma Width */
+    margin-bottom: 25px;
+}
+
+/* --- Features List (Checkmarks Section) --- */
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0; /* Spacing context from Figma */
+    width: 325px;   /* Exact container width */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;       /* Items ke darmiyan ka gap */
+}
+
+.features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 16px;
+    color: #505050;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+/* Updated checkmark logic */
+.features-list li::before {
+    content: ""; /* Empty content */
+    display: inline-block;
+    width: 24px;  /* Exact Figma Width */
+    height: 24px; /* Exact Figma Height */
+    
+    /* Background properties size control ke liye */
+    background-image: url('assets/Layout/check.png');
+    background-size: contain; /* Image ko box ke andar fit rakhega */
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    flex-shrink: 0; /* Icon ko chota hone se bachaye */
+    opacity: 0.7;
+}
+
+/* --- 3. Specifications Table (Inside Tab) --- */
+.detail-specs-table {
+    width: 567px; /* Exact Width from Figma */
+    border: 1px solid #E0E7E9;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.detail-specs-table td {
+    padding: 10px 16px;
+    border: 1px solid #E0E7E9;
+    font-size: 16px;
+}
+
+/* Labels Column */
+.detail-specs-table td:first-child {
+    background-color: #EFF2F4; /* Light gray header-like BG */
+    color: #505050;
+    width: 200px;
+}
+
+.detail-specs-table td:last-child {
+    color: #505050;
+}
+
+
+
+
+
+/* --- Main Layout Controls --- */
+.product-detail-container {
+    display: flex;
+    flex-direction: column; /* Sab sections ko ek ke niche ek rakhega */
+    gap: 20px;
+}
+
+.product-main-card {
+    display: flex;
+    gap: 20px;
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+/* Middle Section Layout */
+.detail-bottom-grid {
+    display: flex; /* Sirf Tabs aur Side Recommendation side-by-side */
+    gap: 28px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.tabs-and-content {
+    flex: 1; /* Tabs zyada jagah lengi */
+}
+
+/* --- Sidebar Main Container --- */
+.recommendations-sidebar {
+    
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 20px;
+    flex-shrink: 0;
+    /* margin-top ko 20px karein taake tabs ke sath align ho */
+    margin-top: 20px; 
+}
+
+.recommendations-sidebar h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1C1C1C;
+    margin-bottom: 16px; /* */
+    margin-top: 0;
+}
+
+/* --- Sidebar Item Layout --- */
+.rec-item {
+    display: flex;
+    gap: 11px; /* Image aur text ke darmiyan exact gap */
+    margin-bottom: 16px;
+    align-items: center;
+}
+
+.rec-item:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Sidebar Image Styling --- */
+.rec-item img {
+    width: 80px;  /* Exact width */
+    height: 80px; /* Exact height */
+    border: 1px solid #DEE2E7; /* Light border */
+    border-radius: 6px;        /* Rounded corners */
+    object-fit: contain;       /* Image stretch na ho */
+    padding: 5px;              /* Image ke andar thori space */
+    background-color: #fff;
+}
+
+/* --- Sidebar Text Styling --- */
+.rec-info p {
+    font-size: 16px;     /* */
+    line-height: 24px;   /* */
+    color: #1C1C1C;
+    margin: 0 0 4px 0;   /* Bottom margin for spacing with price */
+    font-weight: 400;
+}
+
+.rec-info span {
+    font-size: 16px;
+    color: #8B96A5;      /* Muted gray for price */
+    display: block;
+}
+
+/* --- 1. Main Section Container --- */
+.related-products-section {
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 1180px; /* Figma full width */
+    width: 300%;
+    box-sizing: border-box; /* Padding ko width ke andar rakhega */
+    margin-left: auto;
+    margin-right: auto;
+}
+.related-products-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1C1C1C;
+    margin-bottom: 16px;
+}
+
+/* --- 2. Grid Setup (Horizontal) --- */
+.related-grid {
+    display: flex; /* Force grid apply */
+    grid-template-columns: repeat(6, 172px); /* 1fr ki jagah exact width dein */
+    justify-content: space-between; /* Boxes ke beech barabar space */
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* --- 3. Individual Card Styling --- */
+.related-card {
+    width: 172px; /* Figma item width */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* --- 4. Image Size Fix (Most Important) --- */
+.related-card img {
+    width: 172px;  /* Fixed width */
+    height: 172px; /* Square box */
+    background-color: #EEEEEE;
+    border-radius: 6px;
+    object-fit: contain;
+    padding: 10px;
+    display: block; /* Extra space niche se khatam karne ke liye */
+    margin-bottom: 12px;
+}
+
+/* --- 5. Text Styling --- */
+.related-card p {
+    font-size: 16px;
+    color: #505050;
+    margin-bottom: 4px;
+    line-height: 19px;
+}
+
+.related-card span {
+    font-size: 16px;
+    color: #8B96A5;
+}
+
+.description-text {
+    width: 798px; /* Exact Figma width */
+    line-height: 24px;
+    color: #505050;
+    margin-bottom: 25px;
+}
+
+
+
+
+/* --- Discount Banner with Full Background Image --- */
+.discount-banner {
+    width: 1180px;
+    height: 120px;
+    border-radius: 8px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+
+    /* ✅ Multiple Backgrounds: Layer 1 (Diagonal Shape) + Layer 2 (Base Dark Blue) */
+    background-image: 
+        url('assets/Layout//Rectangle 177.png'), /* Top Layer: Diagonal */
+        url('assets/Layout/Rectangle 176.png'); /* Bottom Layer: Dark Blue */
+    
+    background-position: left center, center; /* Rectangle 177 ko left side diagonal rakhega */
+    background-size: contain, cover; /* Diagonal image ka size maintain rahega, base pure ko cover karegi */
+    background-repeat: no-repeat, no-repeat;
+    
+    border: none; /* Borders ki zaroorat nahi kyunke image khud container hai */
+}
+
+/* Background ke upar ek halka sa overlay (optional) taake text saaf dikhe */
+.discount-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(35, 124, 255, 0.2); /* Blue tint taake purana theme barkarar rahe */
+    z-index: 1;
+}
+
+.banner-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5; /* Image ke upar dikhane ke liye */
+}
+
+/* Typography */
+.banner-text h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+}
+
+.banner-text p {
+    font-size: 16px;
+    color: #FFFFFF;
+    opacity: 0.85;
+}
+
+/* Button Styling */
+.shop-now-btn {
+    width: 110px;
+    height: 40px;
+    background-color: #FF9017;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Mobile View (max-width: 480px) --- */
+@media (max-width: 480px) {
+    
+    /* 1. Main Page Wrapper */
+    .product-detail-container {
+        display: flex;
+        flex-direction: column; /* Stack vertically */
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* 2. Image Section */
+    .product-gallery {
+        width: 100%;
+        background: #f8f9fa;
+        text-align: center;
+        position: relative;
+    }
+
+    .main-product-img {
+        width: 100%;
+        max-height: 350px;
+        object-fit: contain;
+    }
+
+    /* 3. Info & Price Section */
+    .product-info-box {
+        padding: 15px;
+        width: 100% !important;
+    }
+
+    .product-price {
+        font-size: 20px;
+        font-weight: 600;
+        color: #fa3434; /* Design red color */
+        margin: 10px 0;
+    }
+
+    /* 4. Action Buttons */
+    .action-btns {
+        display: flex;
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .btn-send-inquiry {
+        flex: 1; /* Button full width le */
+        background: #0D6EFD;
+        color: white;
+        height: 48px;
+        border-radius: 6px;
+        border: none;
+        font-weight: 600;
+    }
+
+    .btn-wishlist {
+        width: 48px;
+        height: 48px;
+        border: 1px solid #DEE2E7;
+        background: white;
+        border-radius: 6px;
+    }
+
+    /* 5. Supplier Box */
+    .supplier-card {
+        border: 1px solid #DEE2E7;
+        border-radius: 6px;
+        padding: 15px;
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* 6. Similar Products (Horizontal Scroll) */
+    .similar-products-grid {
+        display: flex;
+        overflow-x: auto; /* Side scroll for cards */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .similar-card {
+        min-width: 150px; /* Fixed width for cards in horizontal scroll */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100% !important; /* Fixed width hatayein */
+        width: 100% !important;
+        padding: 0 15px !important; /* Side margins dein */
+    }
+}
+
+
+.search-input:focus {
+    border: 1px solid #0D6EFD;
+    outline: none;
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.2);
+}
+
+/* --- 1. Size Dropdown Styling --- */
+.product-options {
+    margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.option-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.option-item label {
+    font-weight: 500;
+    color: #1C1C1C;
+    font-size: 16px;
+}
+
+.size-select {
+    width: 150px; /* Standard dropdown width */
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    color: #1C1C1C;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+}
+
+.size-select:focus {
+    border-color: #0D6EFD; /* Focus par blue border */
+}
+
+/* --- 2. Reviews Display Styling --- */
+.reviews-display {
+    margin-top: 30px;
+    padding: 20px;
+    background: #F8F9FA; /* Thora sa light gray background */
+    border-radius: 8px;
+}
+
+.reviews-display h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #1C1C1C;
+}
+
+.user-review {
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #E3E8EE;
+    margin-bottom: 10px;
+}
+
+.user-review p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.user-review strong {
+    color: #1C1C1C;
+    font-size: 15px;
+}
+
+.stars {
+    color: #FF9017; /* Star orange color */
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.user-review p:last-child {
+    color: #505050; /* Review text color */
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+/* --- Tablet & Mobile Responsive (max-width: 992px) --- */
+@media (max-width: 992px) {
+    /* 1. Main Container Reset */
+    .container, .product-detail-container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. Three-Column to Single-Column Stack  */
+    .product-main-card {
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+
+    .gallery-column, .main-image-box, .info-column, .seller-card, 
+    .product-tabs-wrapper, .recommendations-sidebar, .specs-table, 
+    .price-table, .custom-specs, .description-text {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+    }
+
+    /* 3. Image Gallery Adjustment [cite: 85] */
+    .main-image-box {
+        height: auto !important;
+        aspect-ratio: 1 / 1; /* Square maintain karne ke liye */
+    }
+
+    /* 4. Price Table & Specs [cite: 95, 142] */
+    .price-table {
+        gap: 20px !important;
+        justify-content: space-between;
+    }
+
+    /* 5. Tabs and Sidebar Stack [cite: 180] */
+    .detail-bottom-grid {
+        flex-direction: column !important;
+    }
+
+    .tabs-and-content {
+        order: 1;
+    }
+
+    .recommendations-sidebar {
+        order: 2;
+        width: 100% !important;
+        margin-top: 20px !important;
+    }
+
+    /* 6. Related Products Grid [cite: 202] */
+    .related-grid {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
+        gap: 15px !important;
+    }
+
+    .related-card, .related-card img {
+        width: 100% !important;
+    }
+}
+
+/* --- Small Mobile Fix (max-width: 480px) --- */
+@media (max-width: 480px) {
+    /* Tab Buttons [cite: 120] */
+    .detail-tabs {
+        overflow-x: auto; /* Buttons swipeable ho jayenge */
+        white-space: nowrap;
+        display: flex !important;
+        justify-content: flex-start !important;
+    }
+    
+    .tab {
+        width: auto !important; /* Fixed widths reset  */
+        padding: 0 15px !important;
+        flex-shrink: 0;
+    }
+
+    /* Detail Specs Table [cite: 172] */
+    .detail-specs-table {
+        width: 100% !important;
+    }
+    
+    .detail-specs-table td:first-child {
+        width: 120px !important;
+    }
+
+    /* Discount Banner [cite: 214] */
+    .discount-banner {
+        width: 100% !important;
+        height: auto !important;
+        flex-direction: column !important;
+        text-align: center;
+        padding: 20px !important;
+    }
+
+    .banner-content {
+        flex-direction: column !important;
+        gap: 15px;
+    }
+}

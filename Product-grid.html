@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web-grid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Product-grid.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/Layout/Brand/logo-colored.png" alt="Brand Logo">
+            </div>
+            <div class="input-container">
+                <form action="#" class="input-group">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <select class="input-middle">
+                        <option value="all">All Categories</option>
+                    </select>
+                    <button type="submit" class="search-button">Search</button>
+                </form>
+            </div>
+            <div class="user-actions">
+            <div class="action-items">
+                <a href="Product-detail.html">
+                <img src="assets/header-icons/Profile.png" alt="profile"><span>Profile</span>
+                </a>
+            </div>
+            <div class="action-items">
+                <a href="Product-list.html">
+                <img src="assets/header-icons/Messages.png" alt="messages"><span>Messages</span>
+                </a>
+            </div>
+            <div class="action-items">
+                <a href="Product-grid.html">
+                <img src="assets/header-icons/Orders.png" alt="orders"><span>Orders</span>
+                </a>
+            </div>
+            <div class="action-items">
+                <a href="mycart.html">
+                <img src="assets/header-icons/Cart.png" alt="cart"><span>Cart</span>
+                </a>
+            </div>
+            </div>
+        </div>
+    </header>
+
+<nav class="secondary-navbar">
+    <div class="container navbar-inner">
+        <div class="nav-links">
+            <div class="all-category-btn">
+                <img src="assets/header-icons/menu.png" alt="menu" class="menu-icon">
+                <span>All category</span>
+            </div>
+            <ul class="main-nav-list">
+                <li><a href="#">Hot offers</a></li>
+                <li><a href="#">Gift boxes</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Menu item</a></li>
+                <li class="dropdown">
+                    <a href="#">Help</a>
+                    <img src="assets/Layout/Form/input-group/Icon/control/Vector.png" alt="arrow">
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav-settings">
+            <div class="setting-item">
+                <span>English, USD</span>
+                <img src="assets/Layout/Form/input-group/Icon/control/Vector.png" alt="arrow">
+            </div>
+            <div class="setting-item">
+                <span>Ship to</span>
+                <img src="assets/Layout1/Image/flags/DE@2x.png" alt="Flag" class="nav-flag">
+                <img src="assets/Layout/Form/input-group/Icon/control/Vector.png" alt="arrow">
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="breadcrumb-section">
+    <div class="container">
+        <ul class="breadcrumb-list">
+            <li>Home</li>
+            <li><img src="assets/Layout/Form/input-group/Icon/control/Vector.png" alt="arrow"></li>
+            <li>Clothings</li>
+            <li><img src="assets/Layout/Form/input-group/Icon/control/Vector.png" alt="arrow"></li>
+            <li>Men's wear</li>
+            <li><img src="assets/Layout/Form/input-group/Icon/control/Vector.png" alt="arrow"></li>
+            <li class="active">Summer clothing</li>
+        </ul>
+    </div>
+</div>
+
+<main class="main-content container">
+    <aside class="sidebar">
+        <div class="filter-group">
+            <div class="filter-header"><h3>Category</h3><img src="assets/Layout/Form/input-group/Icon/control/Vector.png" class="expand-icon"></div>
+            <ul class="filter-list">
+                <li>Mobile accessory</li>
+                <li>Electronics</li>
+                <li>Smartphones</li>
+                <li>Modern tech</li>
+                <li class="see-all">See all</li>
+            </ul>
+        </div>
+
+        <div class="filter-group">
+            <div class="filter-header"><h3>Brands</h3><img src="assets/Layout/Form/input-group/Icon/control/Vector.png" class="expand-icon"></div>
+            <ul class="filter-list">
+                <li><label><input type="checkbox"> Samsung</label></li>
+                <li><label><input type="checkbox"> Apple</label></li>
+                <li><label><input type="checkbox"> Huawei</label></li>
+                <li><label><input type="checkbox"> Pocco</label></li>
+                <li><label><input type="checkbox"> Lenovo</label></li>
+                <li class="see-all">See all</li>
+            </ul>
+        </div>
+
+        <div class="filter-group">
+            <div class="filter-header"><h3>Features</h3><img src="assets/Layout/Form/input-group/Icon/control/Vector.png" class="expand-icon"></div>
+            <ul class="filter-list">
+                <li><label><input type="checkbox"> Metallic</label></li>
+                <li><label><input type="checkbox"> Plastic Cover</label></li>
+                <li><label><input type="checkbox"> 8GB Ram</label></li>
+                <li><label><input type="checkbox"> Super power</label></li>
+                <li><label><input type="checkbox"> Large Memory</label></li>
+                <li class="see-all">See all</li>
+            </ul>
+        </div>
+
+        <div class="filter-group">
+            <div class="filter-header"><h3>Price range</h3><img src="assets/Layout/Form/input-group/Icon/control/Vector2.png" class="expand-icon"></div>
+            
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <div class="filter-header"><h3>Condition</h3><img src="assets/Layout/Form/input-group/Icon/control/Vector2.png" class="expand-icon"></div>
+            
+        </div>
+
+        <div class="filter-group">
+            <div class="filter-header"><h3>Ratings</h3><img src="assets/Layout/Form/input-group/Icon/control/Vector2.png" class="expand-icon"></div>
+            
+        </div>
+    </aside>
+
+    <section class="product-listing">
+    <div class="listing-header">
+        <p>12,911 items in <strong>Mobile accessory</strong></p>
+        <div class="header-controls">
+            <label class="verified-label"><input type="checkbox" checked> Verified only</label>
+            <select class="featured-select"><option>Featured</option></select>
+            <div class="view-toggle">
+                <button class="view-btn"><img src="assets/Layout/alibaba/Image/interior/gridview.png" alt="grid"></button>
+                <button class="view-btn active"><img src="assets/Layout/alibaba/Image/interior/listview.png" alt="list"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-badges">
+        <span>Samsung ✕</span>
+        <span>Apple ✕</span>
+        <span>Pocco ✕</span>
+        <span>Metallic ✕</span>
+        <span>4 star ✕</span>
+        <span>3 star ✕</span>
+        <a href="#" class="clear-all">Clear all filter</a>
+    </div>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-img"><img src="assets/Image/tech/image 33.png" alt=""></div>
+            <div class="product-info">
+                <div class="price-row">
+                    <span class="curr-price">$99.50</span>
+                    <span class="old-price">$1128.00</span>
+                </div>
+                <div class="rating-row">
+                    <span class="stars">⭐⭐⭐⭐★</span>
+                    <span class="rating-val">7.5</span>
+                </div>
+                <h4>GoPro HERO6 4K Action Camera - Black</h4>
+            </div>
+            <button class="wishlist-btn">💙</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img"><img src="assets/Image/tech/image 23.png" alt=""></div>
+            <div class="product-info">
+                <div class="price-row"><span class="curr-price">$99.50</span></div>
+                <div class="rating-row"><span class="stars">⭐⭐⭐⭐★</span><span class="rating-val">7.5</span></div>
+                <h4>Canon Camera EOS 2000, Black 10x zoom</h4>
+            </div>
+            <button class="wishlist-btn">💙</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img"><img src="assets/Image/tech/image 32.png" alt=""></div>
+            <div class="product-info">
+                <div class="price-row"><span class="curr-price">$99.50</span></div>
+                <div class="rating-row"><span class="stars">⭐⭐⭐⭐★</span><span class="rating-val">7.5</span></div>
+                <h4>Xiaomi Redmi Note 11S 6/128GB</h4>
+            </div>
+            <button class="wishlist-btn">💙</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img"><img src="assets/Image/tech/image 33.png" alt=""></div>
+            <div class="product-info">
+                <div class="price-row">
+                    <span class="curr-price">$99.50</span>
+                    <span class="old-price">$1128.00</span>
+                </div>
+                <div class="rating-row">
+                    <span class="stars">⭐⭐⭐⭐★</span>
+                    <span class="rating-val">7.5</span>
+                </div>
+                <h4>GoPro HERO6 4K Action Camera - Black</h4>
+            </div>
+            <button class="wishlist-btn">💙</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img"><img src="assets/Image/tech/image 23.png" alt=""></div>
+            <div class="product-info">
+                <div class="price-row"><span class="curr-price">$99.50</span></div>
+                <div class="rating-row"><span class="stars">⭐⭐⭐⭐★</span><span class="rating-val">7.5</span></div>
+                <h4>Canon Camera EOS 2000, Black 10x zoom</h4>
+            </div>
+            <button class="wishlist-btn">💙</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img"><img src="assets/Image/tech/image 32.png" alt=""></div>
+            <div class="product-info">
+                <div class="price-row"><span class="curr-price">$99.50</span></div>
+                <div class="rating-row"><span class="stars">⭐⭐⭐⭐★</span><span class="rating-val">7.5</span></div>
+                <h4>Xiaomi Redmi Note 11S 6/128GB</h4>
+            </div>
+            <button class="wishlist-btn">💙</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img"><img src="assets/Image/tech/image 33.png" alt=""></div>
+            <div class="product-info">
+                <div class="price-row">
+                    <span class="curr-price">$99.50</span>
+                    <span class="old-price">$1128.00</span>
+                </div>
+                <div class="rating-row">
+                    <span class="stars">⭐⭐⭐⭐★</span>
+                    <span class="rating-val">7.5</span>
+                </div>
+                <h4>GoPro HERO6 4K Action Camera - Black</h4>
+            </div>
+            <button class="wishlist-btn">💙</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img"><img src="assets/Image/tech/image 23.png" alt=""></div>
+            <div class="product-info">
+                <div class="price-row"><span class="curr-price">$99.50</span></div>
+                <div class="rating-row"><span class="stars">⭐⭐⭐⭐★</span><span class="rating-val">7.5</span></div>
+                <h4>Canon Camera EOS 2000, Black 10x zoom</h4>
+            </div>
+            <button class="wishlist-btn">💙</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img"><img src="assets/Image/tech/image 32.png" alt=""></div>
+            <div class="product-info">
+                <div class="price-row"><span class="curr-price">$99.50</span></div>
+                <div class="rating-row"><span class="stars">⭐⭐⭐⭐★</span><span class="rating-val">7.5</span></div>
+                <h4>Xiaomi Redmi Note 11S 6/128GB</h4>
+            </div>
+            <button class="wishlist-btn">💙</button>
+        </div>
+
+        </div>
+
+    <div class="pagination-container">
+        <div class="show-limit">
+            <span>Show 10</span>
+            <img src="assets/Layout/Form/input-group/Icon/control/Vector.png" alt="" class="limit-arrow">
+        </div>
+        <div class="page-numbers">
+            <button class="prev-btn"><img src="assets/Layout/Form/input-group/Icon/control/Vector.png" style="transform: rotate(90deg)"></button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="next-btn"><img src="assets/Layout/Form/input-group/Icon/control/Vector.png" style="transform: rotate(-90deg)"></button>
+        </div>
+    </div>
+</section>
+
+        
+    </section>
+</main>
+    
+<section class="newsletter-section">
+    <div class="newsletter-inner">
+        <div class="newsletter-content">
+            <h3 class="newsletter-title">Subscribe on our newsletter</h3>
+            <p class="newsletter-desc">Get daily news on upcoming offers from many suppliers all over the world</p>
+        </div>
+        <form class="newsletter-form">
+            <div class="email-input-wrapper">
+                <img src="assets/Layout1/Image/flags/email.png" alt="email" class="email-icon-inner">
+                <input type="email" placeholder="Email" class="newsletter-input">
+            </div>
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+
+    <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col brand-col">
+            <div class="footer-logo">
+                <img src="assets/Layout/Brand/logo-colored.png" alt="Brand Logo">
+            </div>
+            <p class="brand-desc">
+                Best information about the company gies here but now lorem ipsum is
+            </p>
+            <div class="social-icons">
+                <a href="#"><img src="assets/footer-icons/facebook3.png" alt="fb"></a>
+                <a href="#"><img src="assets/footer-icons/twitter.png" alt="tw"></a>
+                <a href="#"><img src="assets/footer-icons/linkedin.png" alt="in"></a>
+                <a href="#"><img src="assets/footer-icons/instagram.png" alt="ig"></a>
+                <a href="#"><img src="assets/footer-icons/youtube.png" alt="yt"></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>About</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Find store</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Blogs</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Partnership</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Find store</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Blogs</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Information</h4>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Money Refund</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>For users</h4>
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">My Orders</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col app-col">
+            <h4>Get app</h4>
+            <div class="app-links">
+                <a href="#"><img src="assets/footer-icons/market-button.png" alt="App Store"></a>
+                <a href="#"><img src="assets/footer-icons/Group.png" alt="Google Play"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="bottom-container">
+            <p>© 2023 Ecommerce.</p>
+            <div class="language-selector">
+    <img src="assets/Layout1/Image/flags/US@2x.png" alt="US Flag" class="flag-img">
+    <span>English</span>
+    <img src="assets/layout/form/input-group/icon/control/Vector.png" alt="arrow" class="arrow-icon">
+</div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

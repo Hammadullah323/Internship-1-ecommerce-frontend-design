@@ -1,0 +1,706 @@
+/* --- Discount Banner with Full Background Image --- */
+.discount-banner {
+    width: 1180px;
+    height: 120px;
+    border-radius: 8px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+
+    /* ✅ Multiple Backgrounds: Layer 1 (Diagonal Shape) + Layer 2 (Base Dark Blue) */
+    background-image: 
+        url('assets/Layout//Rectangle 177.png'), /* Top Layer: Diagonal */
+        url('assets/Layout/Rectangle 176.png'); /* Bottom Layer: Dark Blue */
+    
+    background-position: left center, center; /* Rectangle 177 ko left side diagonal rakhega */
+    background-size: contain, cover; /* Diagonal image ka size maintain rahega, base pure ko cover karegi */
+    background-repeat: no-repeat, no-repeat;
+    
+    border: none; /* Borders ki zaroorat nahi kyunke image khud container hai */
+}
+
+/* Background ke upar ek halka sa overlay (optional) taake text saaf dikhe */
+.discount-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(35, 124, 255, 0.2); /* Blue tint taake purana theme barkarar rahe */
+    z-index: 1;
+}
+
+.banner-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5; /* Image ke upar dikhane ke liye */
+}
+
+/* Typography */
+.banner-text h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+}
+
+.banner-text p {
+    font-size: 16px;
+    color: #FFFFFF;
+    opacity: 0.85;
+}
+
+/* Button Styling */
+.shop-now-btn {
+    width: 110px;
+    height: 40px;
+    background-color: #FF9017;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Wrapper Layout --- */
+.cart-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* --- Left Container --- */
+.cart-items-container {
+    width: 880px; /* Exact Figma Width */
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.item-main-info { display: flex; gap: 15px; }
+
+.item-img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.item-text h4 { font-size: 16px; font-weight: 500; color: #1C1C1C; margin-bottom: 5px; }
+.item-text p { font-size: 14px; color: #8B96A5; margin-bottom: 2px; }
+
+.item-btns { margin-top: 10px; }
+.btn-remove, .btn-save {
+    background: #FFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.btn-remove { color: #FA3434; margin-right: 8px; }
+.btn-save { color: #0D6EFD; }
+
+/* Pricing Side */
+.item-right-info { text-align: right; }
+.item-price { display: block; font-weight: 600; font-size: 16px; margin-bottom: 10px; }
+.qty-dropdown { padding: 8px; border: 1px solid #DEE2E7; border-radius: 6px; width: 123px; }
+
+/* --- Footer Buttons --- */
+.cart-actions-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.btn-back-shop {
+    background: #0D6EFD;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.btn-clear-cart {
+    background: white;
+    color: #0D6EFD;
+    border: 1px solid #DEE2E7;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+/* --- Right Sidebar --- */
+.cart-summary-sidebar { width: 280px; }
+.summary-details {
+    background: white;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 20px;
+    margin-top: 15px;
+}
+.btn-checkout {
+    width: 100%;
+    background: #00B517; /* Exact Green */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.page-title {
+    width: 100%; /* Poori width taake flex box isay side par na dhakely */
+    margin-bottom: 20px;
+}
+
+.cart-wrapper {
+    display: flex; /* Sidebar aur Items ko side-by-side rakhne ke liye */
+    gap: 20px;
+    width: 1180px; /* Figma full width */
+}
+
+
+
+
+/* --- Right Sidebar Container --- */
+.cart-summary-sidebar {
+    width: 280px; /* Exact Figma Width */
+    flex-shrink: 0;
+}
+
+/* --- 1. Coupon Section --- */
+.coupon-section {
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.coupon-section p {
+    font-size: 16px;
+    color: #505050;
+    margin-bottom: 8px;
+}
+
+.coupon-input-group {
+    display: flex;
+    height: 40px; /* */
+}
+
+.coupon-input-group input {
+    width: 164px; /* */
+    border: 1px solid #DEE2E7;
+    border-radius: 6px 0 0 6px;
+    padding: 0 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.coupon-input-group button {
+    width: 85px; /* */
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-left: none;
+    border-radius: 0 6px 6px 0;
+    color: #0D6EFD;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* --- 2. Summary Details --- */
+.summary-details {
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.s-row {
+    display: flex;
+    justify-content: space-between;
+    height: 24px; /* */
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #505050;
+}
+
+.s-row.discount span:last-child {
+    color: #FA3434; /* Discount Red */
+}
+
+.s-row.tax span:last-child {
+    color: #00B517; /* Tax Green */
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #E4E4E4;
+    margin: 15px 0;
+}
+
+.s-row.total {
+    height: 28px; /* */
+    font-size: 20px;
+    font-weight: 600;
+    color: #1C1C1C;
+    margin-bottom: 20px;
+}
+
+/* --- 3. Checkout Button & Payments --- */
+.btn-checkout {
+    width: 100%;
+    height: 54px; /* */
+    background-color: #00B517; /* Success Green */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+/* Sidebar payment icons container */
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Icons ke darmiyan thora gap */
+    margin-top: 15px;
+}
+
+/* Individual icon sizing */
+.payment-icons img {
+    height: 22px; /* Exact height from Figma properties */
+    width: auto;  /* Width khud adjust ho jayegi ratio ke hisab se */
+    object-fit: contain;
+    /* Agar image ka background white hai aur aap border chahte hain toh ye add karein: */
+    border: 1px solid #DEE2E7;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 1. Features Section (Secure Payment, etc.) --- */
+.cart-features-section {
+    display: flex;
+    gap: 28px;
+    margin: 30px auto;
+    width: 1180px;
+    justify-content: flex-start;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 242px; /* Exact Width */
+}
+
+.feature-icon-box {
+    width: 48px;  /* Exact Circle Size */
+    height: 48px;
+    background-color: #EEEEEE;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.feature-text h4 {
+    font-size: 16px;
+    font-weight: 400; /* */
+    color: #1C1C1C;
+    margin-bottom: 2px;
+}
+
+.feature-text p {
+    font-size: 16px;
+    color: #A9ACB0; /* Exact Gray color */
+    margin: 0;
+}
+
+/* --- 2. Saved for Later Section --- */
+.saved-later-section {
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 20px;
+    width: 1180px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.section-title {
+    font-size: 20px; /* */
+    font-weight: 600;
+    color: #1C1C1C;
+    margin-bottom: 20px;
+}
+
+.saved-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Individual Card */
+.saved-card {
+    width: 270px; /* */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container Box */
+.saved-img-box {
+    width: 270px;  
+    height: 240px; 
+    background-color: #EEEEEE;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    overflow: hidden; /* Image bahar na niklay */
+}
+
+/* 🚀 Image ko bara karne ke liye ye settings use karein */
+.saved-img-box img {
+    width: 100%;       /* Box ki poori width use karega */
+    height: 100%;      /* Box ki poori height use karega */
+    object-fit: contain; /* Image ki quality kharab nahi hogi aur ye box mein fit rahegi */
+    padding: 20px;     /* Side se thori jagah chornay ke liye taake bilkul edge se na chipkay */
+}
+
+.saved-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1C1C1C;
+    margin-bottom: 8px;
+}
+
+.saved-name {
+    font-size: 16px;
+    color: #606060;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    height: 44px; /* Space for 2 lines */
+    overflow: hidden;
+}
+
+/* --- Move to Cart Button --- */
+.btn-move-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* */
+    width: 156px; /* Exact Button Width */
+    height: 40px; /* Exact Button Height */
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    color: #0D6EFD;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-move-to-cart img {
+    width: 18px;
+}
+
+.btn-move-to-cart:hover {
+    background-color: #F7FAFC;
+    border-color: #0D6EFD;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    width: 1180px; /* Desktop */
+    margin: 0 auto;
+}
+
+/* Responsive adjustment */
+@media (max-width: 1200px) {
+    .container {
+        width: 95%; /* Choti screens par 95% width */
+    }
+}
+
+
+.cart-wrapper {
+    display: flex;
+    flex-direction: row; /* Side-by-side on Desktop */
+}
+
+@media (max-width: 768px) {
+    .cart-wrapper {
+        flex-direction: column; /* One-above-another on Mobile */
+    }
+    
+    .cart-items-container, 
+    .cart-summary-sidebar {
+        width: 100%; /* Full width for both */
+    }
+}
+
+.recommended-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items on Desktop */
+    gap: 20px;
+}
+
+@media (max-width: 480px) {
+    .recommended-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items on Mobile */
+        gap: 10px;
+    }
+}
+
+
+/* --- Mobile Responsive Fix --- */
+@media (max-width: 768px) {
+    .container, 
+    .cart-page.container, 
+    .main-header .container,
+    .cart-features-section.container,
+    .saved-later-section.container {
+        width: 100% !important;   /* Force 100% width */
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding: 10px 15px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Cart items ko aik ke niche aik laane ke liye */
+    .cart-wrapper {
+        flex-direction: column !important;
+        display: block !important;
+    }
+
+    .cart-items-container, 
+    .cart-summary-sidebar {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* Logo aur Branding ko mobile par sahi karein */
+    .logo img {
+        max-width: 120px;
+        height: auto;
+    }
+
+    /* Search bar aur icons ko aik line mein laane ke liye */
+    .user-actions {
+        gap: 10px !important;
+    }
+
+    /* Cart items block ko full width karein */
+    .cart-items-container {
+        width: 100% !important;
+        padding: 10px !important;
+    }
+
+    /* Text size mobile ke liye thora chota karein */
+    h2.page-title {
+        font-size: 20px !important;
+        text-align: center;
+    }
+}
+
+
+
+/* --- 📱 Mobile Responsive Fix (max-width: 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Reset All Containers [cite: 136, 137, 138] */
+    .container, 
+    .cart-page.container, 
+    .cart-features-section.container,
+    .saved-later-section.container,
+    .discount-banner {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding: 15px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. Cart Layout Stack (Items on top, Sidebar below) [cite: 130, 131, 139] */
+    .cart-wrapper {
+        flex-direction: column !important;
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .cart-items-container, 
+    .cart-summary-sidebar {
+        width: 100% !important; /* Fixed 880px and 280px reset [cite: 64, 81, 140] */
+        margin-bottom: 20px;
+        padding: 15px !important;
+    }
+
+    /* 3. Individual Cart Item Fix [cite: 66] */
+    .cart-item {
+        flex-direction: column !important; /* Price aur Qty ko niche laane ke liye */
+        gap: 15px;
+    }
+
+    .item-right-info {
+        text-align: left !important; /* Mobile par price left align [cite: 71] */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .qty-dropdown {
+        width: 100px !important; /* Chota dropdown [cite: 72] */
+    }
+
+    /* 4. Coupon Input Group Fix [cite: 85] */
+    .coupon-input-group {
+        width: 100% !important;
+    }
+    .coupon-input-group input {
+        flex: 1; /* Input field poori bachi hui jagah le le [cite: 86] */
+        width: auto !important;
+    }
+
+    /* 5. Features Section (Horizontal to Vertical) [cite: 103, 104] */
+    .cart-features-section {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    .feature-item {
+        width: 100% !important;
+    }
+
+    /* 6. Saved for Later Grid (4 Columns to 1 or 2) [cite: 112, 134] */
+    .saved-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 items per row */
+        gap: 15px !important;
+    }
+    .saved-card, .saved-img-box {
+        width: 100% !important; /* Fixed 270px reset [cite: 113, 114] */
+    }
+    .saved-img-box {
+        height: 180px !important;
+    }
+
+    /* 7. Discount Banner Mobile Styling [cite: 49, 58] */
+    .discount-banner {
+        height: auto !important;
+        padding: 20px !important;
+    }
+    .banner-content {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 15px;
+    }
+
+    /* 8. Page Title adjustment [cite: 79, 144] */
+    h2.page-title {
+        font-size: 22px !important;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+}
+
+/* --- 📱 Small Mobile Fix (max-width: 480px) --- */
+@media (max-width: 480px) {
+    .saved-grid {
+        grid-template-columns: 1fr !important; /* Boht choti screen par 1 item per row */
+    }
+    
+    .btn-back-shop, .btn-clear-cart {
+        padding: 8px 12px !important;
+        font-size: 12px !important;
+    }
+}

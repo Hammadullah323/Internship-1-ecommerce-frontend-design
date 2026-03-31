@@ -1,0 +1,653 @@
+/* --- 1. Main Layout (Side-by-Side) --- */
+.main-content {
+    display: flex !important;
+    gap: 28px;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+/* --- 2. Sidebar Filters Styling --- */
+.sidebar {
+    width: 240px;
+    flex-shrink: 0;
+}
+
+.filter-group {
+    border-top: 1px solid #DEE2E7;
+    padding: 20px 0;
+}
+
+.filter-group:first-child { border-top: none; }
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.filter-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1C1C1C;
+}
+
+.expand-icon { width: 12px; transform: rotate(180deg); }
+
+.filter-list { list-style: none; padding: 0; }
+
+.filter-list li {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #505050;
+    cursor: pointer;
+}
+
+.filter-list li label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.filter-list input {
+    width: 20px;
+    height: 20px;
+    accent-color: #0D6EFD;
+}
+
+.see-all { color: #0D6EFD !important; font-weight: 500; }
+
+/* --- 3. Price Range Specifics --- */
+.range-slider {
+    position: relative;
+    height: 4px;
+    background: #AFD0FF;
+    border-radius: 2px;
+    margin: 15px 0 25px;
+}
+
+.slider-handles .handle {
+    position: absolute;
+    top: -8px;
+    width: 18px;
+    height: 18px;
+    background: #FFF;
+    border: 2px solid #AFD0FF;
+    border-radius: 50%;
+}
+
+.handle.left { left: 10%; }
+.handle.right { right: 40%; }
+
+.price-inputs { display: flex; gap: 10px; margin-bottom: 12px; }
+
+.price-field label { display: block; margin-bottom: 5px; font-size: 14px; }
+
+.price-field input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 0 10px;
+}
+
+.apply-btn {
+    width: 100%;
+    height: 40px;
+    background: #FFF;
+    border: 1px solid #DEE2E7;
+    color: #0D6EFD;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* --- 4. Product Listing Area --- */
+.product-listing { flex: 1; }
+
+.listing-header {
+    background: #FFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 0 20px;
+    height: 62px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header-controls { display: flex; align-items: center; gap: 15px; }
+
+.featured-select {
+    padding: 8px 12px;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+}
+
+.view-toggle { display: flex; border: 1px solid #DEE2E7; border-radius: 6px; overflow: hidden; }
+
+.view-btn {
+    width: 38px;
+    height: 40px;
+    background: #FFF;
+    border: none;
+    border-right: 1px solid #DEE2E7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.view-btn.active { background: #EEEEEE; }
+
+/* --- 5. Product Card (Horizontal) --- */
+.product-card {
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    gap: 25px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.product-img { width: 184px; height: 184px; flex-shrink: 0; }
+.product-img img { width: 100%; height: 100%; object-fit: contain; }
+
+.product-info h4 { font-size: 18px; color: #1C1C1C; margin-bottom: 8px; }
+
+.price-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.curr-price { font-size: 20px; font-weight: 600; }
+.old-price { color: #8B96A5; text-decoration: line-through; }
+
+.rating-row { display: flex; align-items: center; gap: 10px; font-size: 14px; margin-bottom: 12px; }
+.stars { color: #FF9017; }
+.shipping { color: #00B517; font-weight: 500; }
+
+.product-info .desc { color: #505050; line-height: 24px; margin-bottom: 10px; max-width: 600px; }
+
+.view-detail { color: #0D6EFD; text-decoration: none; font-weight: 500; }
+
+.wishlist-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #FFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    color: #0D6EFD;
+    cursor: pointer;
+}
+
+/* --- 6. Pagination Styling --- */
+.pagination-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.page-numbers { display: flex; border: 1px solid #DEE2E7; border-radius: 6px; overflow: hidden; }
+
+.page-btn, .prev-btn, .next-btn {
+    width: 40px;
+    height: 40px;
+    background: #FFF;
+    border: none;
+    border-right: 1px solid #DEE2E7;
+    cursor: pointer;
+}
+
+.page-btn.active { background: #EEEEEE; color: #1C1C1C; font-weight: 600; }
+.page-numbers button:last-child { border-right: none; }
+
+/* --- 1. Global Reset for this page --- */
+.main-content.container {
+    max-width: 1180px; /* Figma base width minus sidebar gap */
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex !important;
+    gap: 28px; /* Exact gap between sidebar and content */
+    align-items: flex-start;
+}
+
+/* --- Breadcrumb Wrapper --- */
+.breadcrumb-section {
+    width: 100%;
+    height: 64px; /* Exact Figma Height */
+    background-color: #F8F9FA; /* Light background as per design */
+    display: flex;
+    align-items: center;
+}
+
+/* List ko bilkul container ke left kinaray se start karne ke liye */
+.breadcrumb-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: flex-start; /* Forced Left Alignment */
+}
+
+/* Typography & Spacing */
+.breadcrumb-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #8B96A5; /* Figma Gray-500 */
+    display: flex;
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+/* Icon (Chevron/Arrow) Style */
+.breadcrumb-list li img {
+    width: 16px; /* Optimized size */
+    margin: 0 12px; /* Text ke dono taraf 12px ka gap */
+    opacity: 0.5;
+    filter: grayscale(1); /* Icons ko neutral gray karne ke liye */
+    transform: rotate(270deg);
+}
+
+/* Jab link par mouse jaye */
+.breadcrumb-list li:not(.active):hover {
+    color: #0D6EFD;
+    cursor: pointer;
+}
+
+/* Last Item (Active Page) */
+.breadcrumb-list li.active {
+    color: #505050; /* Slightly darker shade */
+    font-weight: 400;
+}
+
+/* Container width ensure karne ke liye taake left alignment sahi rahe */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* --- 3. Sidebar (240px) --- */
+.sidebar {
+    width: 240px;
+    flex-shrink: 0;
+}
+
+.filter-group {
+    border-top: 1px solid #DEE2E7;
+    padding: 18px 0;
+}
+
+.filter-group:first-child { border-top: none; }
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.filter-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1C1C1C;
+}
+
+.filter-list { list-style: none; }
+.filter-list li { padding: 6px 0; color: #505050; font-size: 16px; }
+.filter-list label { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.filter-list input { width: 20px; height: 20px; accent-color: #0D6EFD; }
+.see-all { color: #0D6EFD !important; font-weight: 500; margin-top: 5px; }
+
+/* --- 4. Content Area Header (920px) --- */
+.product-listing {
+    width: 920px; /* Fixed width for consistency with Figma */
+    flex-shrink: 0;
+}
+
+.listing-header {
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 0 20px;
+    height: 62px; /* Figma Height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.listing-header p { font-size: 16px; color: #1C1C1C; }
+.listing-header strong { font-weight: 600; }
+
+.header-controls { display: flex; align-items: center; gap: 16px; }
+
+.verified-label { display: flex; align-items: center; gap: 8px; font-size: 16px; }
+.verified-label input { width: 18px; height: 18px; }
+
+.featured-select {
+    width: 172px; /* */
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+}
+
+.view-toggle {
+    display: flex;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.view-btn {
+    width: 38px; /* */
+    height: 40px;
+    background: #FFF;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.view-btn:first-child { border-right: 1px solid #DEE2E7; }
+.view-btn.active { background: #EEEEEE; }
+.view-btn img { width: 22px; height: 22px; }
+
+/* --- 5. Product Card --- */
+.product-card {
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    gap: 24px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.product-img {
+    width: 184px;
+    height: 184px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.product-info h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1C1C1C;
+    margin-bottom: 12px;
+}
+
+.price-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.curr-price { font-size: 20px; font-weight: 600; }
+.old-price { color: #8B96A5; text-decoration: line-through; }
+
+.rating-row { display: flex; align-items: center; gap: 8px; font-size: 14px; margin-bottom: 12px; }
+.stars { color: #FF9017; letter-spacing: 2px; }
+.shipping { color: #00B517; font-weight: 500; margin-left: 5px; }
+
+.product-info .desc {
+    color: #505050;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    max-width: 600px;
+}
+
+.view-detail { color: #0D6EFD; text-decoration: none; font-weight: 500; }
+
+.wishlist-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #FFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    color: #EB001B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* --- 2. Pagination Section --- */
+.pagination-container {
+    display: flex;
+    justify-content: flex-end; /* Right side alignment as per Figma */
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    padding-bottom: 40px;
+}
+
+/* Show 10 Dropdown */
+.show-limit {
+    display: flex;
+    align-items: center;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 0 10px;
+    height: 40px; /* Figma Height */
+    background: #FFFFFF;
+}
+
+.show-limit span {
+    font-size: 16px;
+    color: #1C1C1C;
+    margin-right: 8px;
+}
+
+.show-limit select {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    cursor: pointer;
+    width: 64px; /* Figma Text Width */
+}
+
+/* Page Numbers Group */
+.page-numbers {
+    display: flex;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.page-numbers button {
+    width: 44px; /* Box Width */
+    height: 40px;
+    background: #FFFFFF;
+    border: none;
+    border-right: 1px solid #DEE2E7;
+    font-size: 16px;
+    color: #1C1C1C;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.page-numbers button:last-child {
+    border-right: none;
+}
+
+/* Active Page State */
+.page-numbers .page-btn.active {
+    background: #EEEEEE; /* Grey active state */
+    font-weight: 600;
+}
+
+.page-numbers button:hover:not(.active) {
+    background: #F8F9FA;
+}
+
+/* Prev/Next Icon alignment */
+.prev-btn img, .next-btn img {
+    width: 14px;
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --- Mobile View (max-width: 480px) --- */
+@media (max-width: 480px) {
+    
+    /* 1. Header & Search Fix */
+    .search-container {
+        padding: 10px;
+        width: 100%;
+    }
+
+    /* 2. Horizontal Scroll for Tags (Tablets, Phones, etc.) */
+    .filter-tags-container {
+        display: flex;
+        overflow-x: auto; /* Side scroll enable karega */
+        white-space: nowrap;
+        gap: 8px;
+        padding: 10px 0;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .filter-tags-container::-webkit-scrollbar {
+        display: none; /* Scrollbar hide karega clean look ke liye */
+    }
+
+    .tag-item {
+        padding: 8px 16px;
+        background: #E3F0FF;
+        border-radius: 6px;
+        color: #0D6EFD;
+        font-size: 14px;
+    }
+
+    /* 3. List View Products */
+    .product-list-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .list-item-card {
+        display: flex; /* Horizontal alignment for image and text */
+        background: #FFFFFF;
+        border: 1px solid #DEE2E7;
+        border-radius: 6px;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .list-item-img {
+        width: 110px; /* Fixed square image size */
+        height: 110px;
+        object-fit: contain;
+        background: #EEEEEE;
+        border-radius: 4px;
+    }
+
+    .list-item-info {
+        flex: 1;
+    }
+
+    .list-item-info h4 {
+        font-size: 16px;
+        color: #1C1C1C;
+        margin-bottom: 5px;
+    }
+
+    .list-item-price {
+        font-size: 18px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .rating-box {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        color: #FF9017; /* Star Color */
+    }
+
+    /* 4. "You may also like" Grid (2 Column) */
+    .may-like-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    /* Sidebar ko mobile par chupa dein */
+    .sidebar-filter, .category-sidebar {
+        display: none !important;
+    }
+
+    /* Main content ko poori width dein */
+    .main-content.container {
+        display: block !important;
+        width: 100% !important;
+        padding: 10px !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* 1. Sare containers ko full width karein */
+    .container, .main-content, .newsletter-section, .main-footer {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 15px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    /* 2. Sidebar Filter ko bilkul khatam karein mobile par */
+    .sidebar-filter, .category-sidebar {
+        display: none !important;
+    }
+
+    /* 3. Main content area ko full width dein */
+    .main-content {
+        display: block !important; /* Flexbox stack khatam karega */
+    }
+
+    /* 4. Horizontal scrolling items fix */
+    .filter-tags {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+    }
+}

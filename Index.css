@@ -1,0 +1,1091 @@
+
+/* --- 1. Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #F8F9FA;
+    color: #1C1C1C;
+}
+
+/* --- 2. Standard Layout Container --- */
+.container, .navbar-inner,  .deals-inner, .block-inner, .inquiry-inner, .footer-container, .bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*changes i done*/
+.hero-inner{
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 20px;
+    height: 400px; /* Puray container ki height */
+    display: flex;
+    justify-content: space-between; /* Items ko barabar phailane ke liye */
+    align-items: flex-start;
+    gap: 15px; /* Gaps as per Figma */
+}
+
+/* --- 3. MAIN HEADER SECTION --- */
+.main-banner {
+    flex: none; /* Auto stretch band karne ke liye */
+    width: 665px; /* Exact Figma Width */
+    height: 360px; /* Exact Figma Height */
+    background: #ADEBD2 url('assets/Image/backgrounds/Banner-board-800x420\ 2.png') no-repeat right center;
+    background-size: cover;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*till this i did */
+.main-header .container {
+    height: 86px;
+}
+
+.logo img {
+    height: 46px;
+    display: block;
+}
+
+.input-group {
+    display: flex;
+    width: 665px;
+    height: 40px;
+    border: 2px solid #0D6EFD;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding-left: 15px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-button {
+    width: 100px;
+    background: linear-gradient(180deg, #127FFF 0%, #0067FF 100%);
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.user-actions {
+    display: flex;
+    width: 228px; 
+    justify-content: space-between; 
+}
+
+.action-items {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.action-items img {
+    width: 20px; 
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.action-items span {
+    color: #8B96A5; 
+    font-size: 12px;
+}
+
+/* --- 4. SECONDARY NAVBAR --- */
+.secondary-navbar {
+    height: 56px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #DEE2E7;
+    width: 100%;
+}
+
+.navbar-inner {
+    height: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.all-category-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 28px; 
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 24px;
+}
+
+.main-nav-list {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.main-nav-list li a {
+    text-decoration: none;
+    color: #1C1C1C;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.dropdown img, .setting-item img:not(.nav-flag) {
+    width: 10px;
+    height: auto;
+}
+
+.nav-settings {
+    display: flex;
+    gap: 32px;
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-flag {
+    width: 22px;
+}
+
+/* --- 5. HERO SECTION --- */
+.hero-section {
+    padding: 20px 0;
+}
+
+.hero-inner {
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 20px;
+    height: 400px;
+    gap: 15px;
+    align-items: stretch;
+}
+
+.category-sidebar {
+    width: 250px;
+}
+
+.category-sidebar ul {
+    list-style: none;
+}
+
+.category-sidebar ul li {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 6px;
+}
+
+.category-sidebar ul li.active, .category-sidebar ul li:hover {
+    background-color: #E5F1FF;
+}
+
+.category-sidebar ul li a {
+    text-decoration: none;
+    color: #505050;
+    font-size: 16px;
+}
+
+.main-banner {
+    flex: 1;
+    background: #ADEBD2 url('assets/Image/backgrounds/Banner-board-800x420\ 2.png') no-repeat right center;
+    background-size: cover;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-content h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.banner-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.learn-more-btn {
+    width: 119px;
+    height: 40px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.right-panel {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-card {
+    background: #E3F0FF;
+    padding: 15px;
+    border-radius: 6px;
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-info img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info p {
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.btn-primary {
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(180deg, #127FFF 0%, #0067FF 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.btn-secondary {
+    width: 100%;
+    height: 30px;
+    background: white;
+    color: #0D6EFD;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.offer-box {
+    height: 95px;
+    padding: 15px;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+}
+
+.offer-box.orange { background: #F38332; }
+.offer-box.teal { background: #55BDC3; }
+
+/* --- 6. DEALS AND OFFERS SECTION --- */
+.deals-section {
+    padding: 10px 0 20px;
+}
+
+.deals-inner {
+    display: flex;
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    height: 240px; 
+    padding: 0;
+    overflow: hidden;
+    align-items: stretch;
+}
+
+.countdown-box {
+    width: 280px;
+    padding: 20px;
+    border-right: 1px solid #DEE2E7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.deals-info h3 { 
+    font-size: 20px; 
+    font-weight: 600; 
+    color: #1C1C1C;
+    margin-bottom: 4px;
+}
+
+.deals-info p { 
+    color: #8B96A5; 
+    font-size: 16px; 
+    margin-bottom: 18px; 
+}
+
+.timer { display: flex; gap: 6px; }
+
+.time-unit {
+    width: 45px;
+    height: 50px;
+    background: #606060;
+    color: #FFFFFF;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-unit span { font-size: 16px; font-weight: 700; }
+.time-unit p { font-size: 11px; opacity: 0.8; }
+
+.deals-grid {
+    flex: 1;
+    display: flex;
+}
+
+.deal-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-right: 1px solid #DEE2E7;
+    transition: 0.2s;
+}
+
+.deal-item:last-child { border-right: none; }
+
+.deal-item img {
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.product-name {
+    font-size: 14px;
+    color: #1C1C1C;
+    margin-bottom: 7px;
+}
+
+.discount {
+    background-color: #FFE3E3; 
+    color: #EB001B; 
+    padding: 4px 12px;
+   /* width: 61px;
+    height: 28px;*/
+    border-radius: 20px; 
+   /* display: flex;
+    align-items: center;
+    justify-content: center;*/
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.deal-item:hover { background-color: #F7F8FA; }
+
+/* --- 7. CATEGORY BLOCKS (HOME & ELECTRONICS) --- */
+.category-block {
+    padding-bottom: 20px;
+}
+
+.block-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    height: 257px; 
+    display: flex;
+    overflow: hidden; /* */
+    align-items: stretch; /* */
+    
+    /* YEH SABSE ZARURI LINE HAI: */
+    padding: 0 !important; /* Is se wo 20px ka green gap (padding) khatam ho jayega */
+}
+.block-aside {
+    padding: auto; /* Background image khud padding handle karegi content ke liye */
+    flex-shrink: 0; /* Taake container aside ko chota na kare */
+}
+
+/* --- Home and Outdoor Banner Fix --- */
+.outdoor-bg {
+    width: 280px; /* */
+    height: 257px; /* */
+    background-image: url('assets/Image/backgrounds/Group\ 969.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover; /* Ye image ko proportional rakhte hue box fill karega */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 6px 0 0 6px; /* Sirf left side ke corners round honge */
+    margin: 0; /* Kisi bhi qism ka margin hata dein */
+}
+
+/* --- Consumer Electronics Banner Fix --- */
+.electronics-bg {
+    width: 280px; /* */
+    height: 257px; /* */
+    background-image: url('assets/Image/backgrounds/image\ 98.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Bilkul edges tak image phel jayegi */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 6px 0 0 6px;
+    margin: 0;
+}
+.block-aside h4 {
+    font-size: 20px; /* */
+    font-weight: 600;
+    line-height: 26px;
+    margin-bottom: 18px;
+    position: relative; /* Image ke upar text clear dikhane ke liye */
+    z-index: 2;
+}
+
+.source-btn {
+    width: 123px; /* */
+    height: 40px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0px 1px 2px rgba(56, 56, 56, 0.08);
+    position: relative;
+    z-index: 2;
+}
+.block-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.grid-item {
+    padding: 20px 15px;
+    border-left: 1px solid #DEE2E7;
+    border-bottom: 1px solid #DEE2E7;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.grid-item:nth-child(n+5) { border-bottom: none; }
+
+.item-info p {
+    font-size: 16px;
+    color: #1C1C1C;
+    margin-bottom: 5px;
+}
+
+.item-info span {
+    font-size: 13px;
+    color: #8B96A5;
+}
+
+.grid-item img {
+    width: 82px;
+    height: 82px;
+    object-fit: contain;
+    align-self: flex-end;
+}
+
+.grid-item:hover { background-color: #F7F8FA; }
+
+/* --- 8. INQUIRY SECTION --- */
+.inquiry-section {
+    padding: 20px 0;
+}
+
+.inquiry-inner {
+    height: 420px; 
+    background: linear-gradient(94.99deg, #2C7CF1 7.1%, rgba(0, 209, 255, 0.5) 70.59%), 
+                url('assets/Image/backgrounds/Group\ 982.png') no-repeat center/cover;
+    border-radius: 6px;
+    padding: 40px; 
+    align-items: flex-start; 
+}
+
+.inquiry-banner {
+    max-width: 440px; 
+    color: #FFFFFF;
+}
+
+.inquiry-banner h2 {
+    font-size: 32px; 
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.inquiry-form-card {
+    width: 491px; 
+    background: #FFFFFF;
+    border-radius: 6px;
+    padding: 25px 30px;
+}
+
+.inquiry-form-card h3 {
+    font-size: 20px; 
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.form-group { margin-bottom: 15px; }
+
+.form-input, .form-textarea {
+    width: 100%;
+    border: 1px solid #DEE2E7; 
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-input { height: 40px; }
+.form-textarea { height: 73px; resize: none; }
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.qty-input {
+    width: 111px;
+    height: 40px;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 0 10px;
+}
+
+.form-select-container {
+    position: relative;
+    width: 111px;
+}
+
+.form-select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 0 10px;
+    appearance: none; 
+    background-image: url('assets/expand_more.png'); 
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+.send-inquiry-btn {
+    width: 128px;
+    height: 40px;
+    background: linear-gradient(180deg, #127FFF 0%, #0067FF 100%);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* --- 9. RECOMMENDED ITEMS (220px x 310px as per Figma) --- */
+.recommended-section { padding: 30px 0; }
+.section-title { font-size: 24px; font-weight: 600; margin-bottom: 20px; }
+
+.recommend-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Row mein 5 items */
+    gap: 20px;
+}
+
+.recommend-card {
+    background: #FFFFFF;
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 10px;
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.recommend-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.card-info { padding: 5px; }
+.recommend-card .price { font-size: 16px; font-weight: 600; margin-bottom: 5px; }
+.recommend-card .desc { font-size: 14px; color: #8B96A5; line-height: 20px; }
+
+/* --- 10. EXTRA SERVICES (280px x 200px as per Figma) --- */
+.services-section { padding-bottom: 50px; }
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+.service-card {
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    height: 200px;
+    width: 280px;
+    position: relative;
+    overflow: visible; /* Forces circle to show outside */
+}
+
+.service-img-box {
+    height: 120px;
+    position: relative;
+    background: #000;
+    border-radius: 6px 6px 0 0;
+    overflow: visible; /* Crucial for icon overlap */
+}
+
+.service-img-box img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px 6px 0 0; opacity: 0.8; }
+
+.service-icon {
+    width: 55px; 
+    height: 55px;
+    background: #D1E7FF;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -27.5px; /* Exactly half-out */
+    right: 20px;
+    z-index: 99;
+}
+.service-icon img { 
+    width: 24px; /* Fixed small size */
+    height: 24px; 
+    object-fit: contain; 
+}
+
+.service-card p {
+    padding: 40px 20px 0px 20px; /* Spacing from left border and top icon */
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+/* --- 11. FOOTER SECTION --- */
+.main-footer {
+    background-color: #FFFFFF;
+    padding-top: 40px;
+    border-top: 1px solid #DEE2E7;
+    margin-top: 60px;
+}
+
+.footer-container {
+    align-items: flex-start;
+    padding-bottom: 40px;
+}
+
+.brand-col { width: 276px; }
+
+.brand-desc {
+    color: #505050;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 15px 0;
+}
+
+.social-icons { display: flex; gap: 10px; }
+.social-icons img { width: 32px; height: 32px; }
+
+.footer-col h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a {
+    text-decoration: none;
+    color: #8B96A5;
+    font-size: 16px;
+}
+
+.footer-bottom {
+    background-color: #F7F8FA;
+    border-top: 1px solid #DEE2E7;
+    padding: 20px 0;
+}
+
+/* --- 1. Global & Header/Footer Protected --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background-color: #f8f9fa; color: #1C1C1C; }
+
+/* Original Container for Flex sections (Header/Nav/Footer Bottom) [cite: 214-215] */
+.container, .navbar-inner, .hero-inner, .deals-inner, .block-inner, .inquiry-inner, .bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- NEW FIX: For Vertical Stacking (Recommended & Services) --- */
+.container-stack {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: block !important; /* Heading upar, Grid niche */
+}
+
+.section-title {
+    font-size: 24px; /* */
+    font-weight: 600; /* */
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+/* --- GRID LAYOUTS --- */
+.recommend-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+/* --- RECOMMENDED CARDS --- */
+.recommend-card { background: #FFF; border: 1px solid #DEE2E7; border-radius: 6px; padding: 10px; height: 310px; display: flex; flex-direction: column; }
+.recommend-card img { width: 100%; height: 180px; object-fit: contain; }
+.recommend-card .price { font-size: 16px; font-weight: 600; margin-top: 10px; }
+.recommend-card .desc { font-size: 14px; color: #8B96A5; margin-top: 5px; line-height: 20px; }
+
+/* --- SERVICES CARDS --- */
+.service-card { background: #FFF; border: 1px solid #DEE2E7; border-radius: 6px; overflow: hidden; height: 200px; position: relative; }
+.service-img-box { height: 120px; position: relative; background: #000; }
+.service-img-box img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
+.service-icon { width: 55px; height: 55px; background: #D1E7FF; border: 2px solid #FFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: absolute; bottom: -27px; right: 20px; }
+.service-icon img { width: 24px; height: 24px; object-fit: contain; }
+.service-card p {font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500 ;
+    line-height: 22px;
+    color: #1C1C1C;
+    /* Box ke andar alignment Figma jaisi karne ke liye */
+    width: 215px; /* Figma Width */
+    padding: 27px 20px 20px 20px;/* padding: 35px 20px 10px; font-weight: 500; font-size: 16px;*/ }
+
+/* --- FOOTER SECTION (RESTORED ALIGNMENT [cite: 297-302]) --- */
+.main-footer { background-color: #FFFFFF; padding-top: 40px; border-top: none; margin-top: 0; }
+.footer-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex !important; /* Original Side-by-Side look */
+    justify-content: space-between;
+    align-items: flex-start !important; 
+    padding-bottom: 40px; 
+}
+.footer-col ul { list-style: none; }
+.footer-col h4 { margin-bottom: 20px; font-size: 16px; font-weight: 600; }
+.footer-col li { margin-bottom: 10px; list-style: none; }
+.footer-col a { text-decoration: none; color: #8B96A5; font-size: 16px; }
+.footer-bottom { background-color: #E0E7EE; border-top: 1px solid #DEE2E7; padding: 20px 0; }
+
+/* --- Suppliers Region Section --- */
+.region-section {
+    padding: 20px 0 40px; 
+    background-color: #F8F9FA;
+}
+
+/* Grid height as per Figma: 138px approx including title gap */
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 items in a row */
+    grid-template-rows: repeat(2, 1fr);    /* 2 rows */
+    gap: 15px 20px;
+}
+
+/* Item layout */
+.region-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    width: 221px; /* */
+    height: 36px;  /* */
+}
+
+/* Flag Icon: 28x20px */
+.region-item img {
+    width: 28px;
+    height: 20px;
+    margin-top: 2px; /* Alignment fix */
+}
+
+.region-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Name: 16px Inter Normal */
+.region-name {
+    font-size: 16px;
+    font-weight: 400;
+    color: #1C1C1C;
+    line-height: 24px;
+}
+
+/* Subtitle: 13px Inter Gray */
+.region-url {
+    font-size: 13px;
+    font-weight: 400;
+    color: #8B96A5; /* Gray color for subtitle */
+    line-height: 16px;
+}
+
+/* --- Newsletter Section --- */
+.newsletter-section {
+    width: 100%;
+    height: 190px; /* */
+    background-color: #EFF2FA; /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.newsletter-inner {
+    width: 617px; /* Total content width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+/* Title: 20px Inter Semi Bold */
+.newsletter-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1C1C1C;
+    margin-bottom: 5px;
+    line-height: 28px;
+}
+
+/* Description: 16px Inter Regular */
+.newsletter-desc {
+    font-size: 16px;
+    font-weight: 400;
+    color: #505050;
+    margin-bottom: 20px;
+}
+
+/* Form Layout */
+.newsletter-form {
+    display: flex;
+    gap: 8px; /* Gap between input and button */
+}
+
+/* Input Wrapper for Icon */
+.email-input-wrapper {
+    position: relative;
+    width: 274px; /* */
+    height: 40px;
+}
+
+.email-icon-inner {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px; /* */
+    height: 22px;
+    opacity: 0.6;
+}
+
+/* Input Field: 16px Inter */
+.newsletter-input {
+    width: 274px; /* Exact width */
+    height: 40px; /* Exact height */
+    background-color: #FFFFFF; /* Input box white hona chahiye */
+    border: 1px solid #DEE2E7;
+    border-radius: 6px;
+    padding: 0 10px 0 40px; /* Space for icon */
+    font-size: 16px;
+    outline: none;
+}
+
+.newsletter-input::placeholder {
+    color: #8B96A5; /* */
+}
+
+/* Button: 110px Width, Blue Gradient */
+.subscribe-btn {
+    width: 110px;
+    height: 40px;
+    background: linear-gradient(180deg, #127FFF 0%, #0067FF 100%);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 📱 Mobile Responsive Overrides (max-width: 480px) --- */
+@media (max-width: 480px) {
+    
+    /* 1. Global Container Reset [cite: 237, 238] */
+    .container, .navbar-inner, .hero-inner, .deals-inner, .block-inner, .inquiry-inner, .container-stack {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px !important;
+        flex-direction: column !important; /* Items ko aik ke niche aik laane ke liye */
+        height: auto !important; /* Fixed heights khatam */
+        gap: 20px !important;
+    }
+
+    /* 2. Header & Search Fix [cite: 250, 254] */
+    .main-header .container {
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+    .logo { order: 1; width: auto !important; }
+    .user-actions { 
+        order: 2; 
+        width: auto !important; 
+        gap: 15px !important;
+    }
+    .input-container { 
+        order: 3; 
+        width: 100% !important; 
+        margin-top: 10px !important; 
+    }
+    .input-group { 
+        width: 100% !important; /* Desktop ki 665px width khatam [cite: 87] */
+    }
+    .input-middle { display: none; } /* Mobile par category dropdown hide [cite: 267] */
+
+    /* 3. Hero Section Reset [cite: 102, 243] */
+    .hero-section { padding: 10px 0 !important; }
+    .category-sidebar, .right-panel { display: none !important; } /* Mobile par sidebar hide [cite: 10] */
+    .main-banner {
+        width: 100% !important;
+        height: 200px !important;
+        padding: 20px !important;
+        background-position: center !important;
+    }
+    .banner-content h1 { font-size: 24px !important; }
+
+    /* 4. Deals & Offers [cite: 245, 246] */
+    .deals-inner { height: auto !important; }
+    .countdown-box { 
+        width: 100% !important; 
+        border-right: none !important; 
+        border-bottom: 1px solid #DEE2E7; 
+        padding: 15px !important;
+    }
+    .deals-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 items per row [cite: 245] */
+        width: 100% !important;
+    }
+    .deal-item { border-bottom: 1px solid #DEE2E7; }
+
+    /* 5. Category Blocks (Home/Electronics) [cite: 149, 248] */
+    .block-inner { height: auto !important; flex-direction: column !important; }
+    .block-aside { 
+        width: 100% !important; 
+        height: 150px !important; 
+        border-radius: 6px 6px 0 0 !important; 
+    }
+    .block-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* 4 ki jagah 2 columns [cite: 149] */
+        grid-template-rows: auto !important;
+    }
+
+    /* 6. Recommended Items [cite: 166, 255] */
+    .recommend-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* Mobile par 2 columns [cite: 255] */
+        gap: 10px !important;
+    }
+    .recommend-card { height: auto !important; }
+
+    /* 7. Extra Services & Regions [cite: 171, 212] */
+    .services-grid, .region-grid {
+        grid-template-columns: repeat(1, 1fr) !important; /* 1 item per row */
+    }
+    .service-card { width: 100% !important; }
+
+    /* 8. Footer Fix [cite: 207] */
+    .footer-container {
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+    .brand-col { width: 100% !important; }
+}
