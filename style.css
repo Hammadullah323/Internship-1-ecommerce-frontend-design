@@ -74,27 +74,30 @@ body {
 
 .user-actions {
     display: flex;
-    width: 228px; 
-    justify-content: space-between; 
+    gap: 20px; /* Icons ke darmiyan munasib gap */
+    justify-content: flex-end; /* Right side par align rahega */
+    align-items: center;
 }
 
 .action-items {
     display: flex;
     flex-direction: column; 
     align-items: center;
-    text-align: center;
     cursor: pointer;
+    min-width: 50px; /* Taake text lamba ho toh icon hilay nahi */
 }
 
 .action-items img {
     width: 20px; 
     height: 20px;
-    margin-bottom: 5px;
+    object-fit: contain;
+    margin-bottom: 0; /* Extra margin hata dein kyunke gap use ho raha hai */
 }
 
 .action-items span {
-    color: #8B96A5; 
+    color: #8B96A5; /* Professional Gray color */
     font-size: 12px;
+    font-weight: 400;
 }
 
 /* --- 4. SECONDARY NAVBAR --- */
@@ -335,12 +338,12 @@ body {
 
 /* 1. Links ki default blue line aur color khatam karein */
 .action-items a {
-    text-decoration: none; /* Underline khatam */
-    color: #8B96A5;        /* Figma wala gray color */
-    display: flex;         /* Flexbox layout barkarar rakhega */
-    flex-direction: column; /* Icon ooper aur text niche */
-    align-items: center;    /* Center align karega */
-    gap: 4px;              /* Icon aur text ke beech gap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none !important; /* Underline khatam */
+    gap: 5px; /* Icon aur text ke darmiyan spacing */
+    transition: 0.3s;
 }
 
 /* 2. Hover effect (Optional: jab mouse le kar jayen) */
@@ -348,12 +351,18 @@ body {
     color: #0D6EFD; /* Primary blue color on hover */
 }
 
-/* 3. Image sizing ensure karein */
-.action-items a img {
-    width: 20px;
-    height: 20px;
-    margin-bottom: 5px;
+.action-items a:hover span {
+    color: #0D6EFD; /* Hover karne par text blue ho jayega */
 }
+/* 3. Image sizing ensure karein */
+
+
+.action-items a:hover img {
+    filter: brightness(0) saturate(100%) invert(35%) sepia(93%) font-family: 'Inter', sans-serif;
+    /* Optional: Icon ko bhi blue tint dene ke liye */
+}
+/* 2. Har item (Icon + Text) ko center karein */
+
 
 /* 4. Span (Text) ki styling */
 .action-items a span {
@@ -361,3 +370,53 @@ body {
     color: inherit; /* Parent anchor wala color hi use karega */
 }
 
+/* Links ki default styling khatam karein */
+.action-items a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none !important; /* Underline khatam */
+    color: #8B96A5 !important; /* Standard Grey color for all pages */
+    gap: 4px;
+    transition: 0.3s ease;
+}
+
+/* Hover par blue color dikhane ke liye */
+.action-items a:hover {
+    color: #0D6EFD !important;
+}
+
+.action-items img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.action-items span {
+    font-size: 12px;
+    font-weight: 400;
+    color: inherit; /* Anchor wala color hi uthayega */
+}
+
+/* Sab pages ke liye links ki default underline khatam */
+.action-items a, 
+.action-items a span {
+    text-decoration: none !important; /* Forcefully remove underline */
+    border-bottom: none !important;  /* Agar border-bottom use ho rahi hai */
+    outline: none !important;
+}
+
+.action-items a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #8B96A5 !important; /* Standard Gray color */
+    gap: 4px;
+}
+
+/* Hover state styling */
+.action-items a:hover, 
+.action-items a:hover span {
+    color: #0D6EFD !important; /* Hover par blue */
+    text-decoration: none !important;
+}
